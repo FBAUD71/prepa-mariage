@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prépa Mariage</title>
+
+  <!-- ICÔNE COMPATIBLE PC ET IPHONE -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- MANIFESTE PWA INTERNE -->
+  <script>
+    const manifestData = {
+      "name": "Parcours Préparation au Mariage",
+      "short_name": "Prépa Mariage",
+      "start_url": window.location.href,
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "theme_color": "#0f172a",
+      "icons": [
+        { "src": "icon.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "icon.png", "sizes": "512x512", "type": "image/png" }
+      ]
+    };
+    const blob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
+    const link = document.createElement('link');
+    link.rel = 'manifest';
+    link.href = URL.createObjectURL(blob);
+    document.head.appendChild(link);
+  </script>
+
+  <!-- REDIRECTION AUTOMATIQUE VERS APPS SCRIPT -->
+  <script>
+    // La redirection s'exécute après 1 seconde pour laisser le temps au navigateur de charger les icônes PWA
+    setTimeout(function() {
+      window.location.href = "https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0";
+    }, 1000);
+  </script>
+</head>
+<body style="font-family: -apple-system, sans-serif; text-align: center; padding-top: 50px; background-color: #f8fafc; color: #334155;">
+  <h2>Chargement du Parcours de Préparation au Mariage...</h2>
+  <p>Vous allez être redirigé automatiquement.</p>
+</body>
+</html>
