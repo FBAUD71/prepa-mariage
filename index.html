@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prépa Mariage</title>
 
-  <!-- FICHIER MANIFESTE PHYSIQUE (Pour PC / Chrome / Edge) -->
   <link rel="manifest" href="manifest.json">
-
-  <!-- BALISES EXPLICITES IPHONE (Safari iOS) -->
   <link rel="apple-touch-icon" href="icon.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="icon.png">
   <link rel="icon" type="image/png" href="icon.png">
 
-  <!-- REDIRECTION (Adaptée pour laisser Safari charger l'icône) -->
   <script>
-    // Si l'utilisateur a ouvert l'application depuis l'écran d'accueil/bureau, on redirige tout de suite
     const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
-    
     if (isStandalone) {
       window.location.href = "https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0";
     }
@@ -27,20 +18,27 @@
 </head>
 <body style="font-family: -apple-system, sans-serif; text-align: center; padding: 40px 20px; background-color: #f8fafc; color: #334155;">
   <div style="max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-    <img src="icon.png" alt="Logo" style="width: 100px; height: 100px; border-radius: 20px; margin-bottom: 20px;">
-    <h2 style="font-size: 1.25rem; margin-bottom: 10px;">Parcours Préparation au Mariage</h2>
-    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 25px;">Cliquez ci-dessous pour accéder à l'application.</p>
     
-    <a id="btnAcceder" href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0" style="display: inline-block; background-color: #2563eb; color: white; text-decoration: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; font-size: 0.95rem;">
-      Accéder au Parcours
+    <!-- ICÔNE VECTORIELLE PAR DÉFAUT SI L'IMAGE BUG (Des alliances stylisées) -->
+    <div style="width: 80px; height: 80px; margin: 0 auto 20px auto; background: #eff6ff; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="12" r="6"/>
+        <circle cx="15" cy="12" r="6"/>
+      </svg>
+    </div>
+
+    <h2 style="font-size: 1.25rem; margin-bottom: 10px;">Parcours Préparation au Mariage</h2>
+    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 25px;">Redirection vers l'application...</p>
+    
+    <a href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0" style="display: inline-block; background-color: #2563eb; color: white; text-decoration: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; font-size: 0.95rem;">
+      Accéder directement
     </a>
   </div>
 
   <script>
-    // Redirection automatique seulement après 2.5 secondes si l'utilisateur est dans le navigateur classique
     setTimeout(function() {
       window.location.href = "https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0";
-    }, 2500);
+    }, 2000);
   </script>
 </body>
 </html>
