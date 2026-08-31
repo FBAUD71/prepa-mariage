@@ -5,41 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prépa Mariage</title>
 
-  <!-- ICÔNE COMPATIBLE PC ET IPHONE -->
+  <!-- FICHIER MANIFESTE PHYSIQUE (Pour PC / Chrome / Edge) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- BALISES EXPLICITES IPHONE (Safari iOS) -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="icon.png">
   <link rel="icon" type="image/png" href="icon.png">
 
-  <!-- MANIFESTE PWA INTERNE -->
+  <!-- REDIRECTION (Adaptée pour laisser Safari charger l'icône) -->
   <script>
-    const manifestData = {
-      "name": "Parcours Préparation au Mariage",
-      "short_name": "Prépa Mariage",
-      "start_url": window.location.href,
-      "display": "standalone",
-      "background_color": "#ffffff",
-      "theme_color": "#0f172a",
-      "icons": [
-        { "src": "icon.png", "sizes": "192x192", "type": "image/png" },
-        { "src": "icon.png", "sizes": "512x512", "type": "image/png" }
-      ]
-    };
-    const blob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
-    const link = document.createElement('link');
-    link.rel = 'manifest';
-    link.href = URL.createObjectURL(blob);
-    document.head.appendChild(link);
-  </script>
-
-  <!-- REDIRECTION AUTOMATIQUE VERS APPS SCRIPT -->
-  <script>
-    // La redirection s'exécute après 1 seconde pour laisser le temps au navigateur de charger les icônes PWA
-    setTimeout(function() {
-      window.location.href = "https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0";
-    }, 1000);
+    // Si l'utilisateur a ouvert l'application depuis l'écran d'accueil/bureau, on redirige tout de suite
+    const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+    
+    if (isStandalone) {
+      window.location.href = "VOTRE_URL_EXEC_APPS_SCRIPT";
+    }
   </script>
 </head>
-<body style="font-family: -apple-system, sans-serif; text-align: center; padding-top: 50px; background-color: #f8fafc; color: #334155;">
-  <h2>Chargement du Parcours de Préparation au Mariage...</h2>
-  <p>Vous allez être redirigé automatiquement.</p>
+<body style="font-family: -apple-system, sans-serif; text-align: center; padding: 40px 20px; background-color: #f8fafc; color: #334155;">
+  <div style="max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+    <img src="icon.png" alt="Logo" style="width: 100px; height: 100px; border-radius: 20px; margin-bottom: 20px;">
+    <h2 style="font-size: 1.25rem; margin-bottom: 10px;">Parcours Préparation au Mariage</h2>
+    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 25px;">Cliquez ci-dessous pour accéder à l'application.</p>
+    
+    <a id="btnAcceder" href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk%2Fdev&data=05%7C02%7C%7Cb0e6fba0d27c495349de08df011e64d7%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639230902177109485%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=UgR%2BlMUBT7v%2BC3aOMvzRsi901sdLL6XlPq20EWiWXVk%3D&reserved=0" style="display: inline-block; background-color: #2563eb; color: white; text-decoration: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; font-size: 0.95rem;">
+      Accéder au Parcours
+    </a>
+  </div>
+
+  <script>
+    // Redirection automatique seulement après 2.5 secondes si l'utilisateur est dans le navigateur classique
+    setTimeout(function() {
+      window.location.href = "VOTRE_URL_EXEC_APPS_SCRIPT";
+    }, 2500);
+  </script>
 </body>
 </html>
