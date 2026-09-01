@@ -3,9 +3,11 @@
   "short_name": "Prépa Mariage",
   "description": "Application de préparation au mariage",
   "start_url": "https://script.google.com/macros/s/AKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk/dev",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f172a",
+  "lang": "fr",
   "icons": [
     {
       "src": "https://github.com/FBAUD71/prepa-mariage/raw/main/web-app-manifest-192x192.png",
