@@ -1,22 +1,27 @@
 {
   "name": "Parcours Préparation au Mariage",
   "short_name": "Prépa Mariage",
-  "start_url": "./index.html",
+  "description": "Application de préparation au mariage",
+  "start_url": "https://script.google.com/macros/s/AKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk/dev",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f172a",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "https://github.com/VOTRE_UTILISATEUR/VOTRE_DEPOT/raw/main/icone-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "icon.png",
+      "src": "https://github.com/VOTRE_UTILISATEUR/VOTRE_DEPOT/raw/main/icone-512x512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://github.com/VOTRE_UTILISATEUR/VOTRE_DEPOT/raw/main/icone-180x180.png",
+      "sizes": "180x180",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "apple touch icon"
     }
   ]
 }
