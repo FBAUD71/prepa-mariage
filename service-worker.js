@@ -8,20 +8,18 @@ const urlsToCache = [
   'icone-512x512.png'
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
+// Rediriger vers Google Apps Script si l'utilisateur ouvre la PWA
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        return response || fetch(event.request);
-      })
-  );
+  if (event.request.url.includes('github.io')) {
+    event.respondWith(
+      Response.redirect('https://script.google.com/macros/s/AKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk/dev', 301)
+    );
+  } else {
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          return response || fetch(event.request);
+        })
+    );
+  }
 });
