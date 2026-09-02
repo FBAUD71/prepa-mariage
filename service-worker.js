@@ -1,12 +1,11 @@
-const CACHE_NAME = 'prepa-mariage-v1';
+const CACHE_NAME = 'prepa-mariage-install-v1';
 const urlsToCache = [
   '/',
-  'https://script.google.com/macros/s/AKfycbx8H4Za1sw2o9cwFCxjzU6uf20N45YhDrJpNHuS_sVk/dev', // Remplacez par l'URL de votre Web App
-  'https://github.com/FBAUD71/prepa-mariage/raw/main/web-app-manifest-192x192.png',
-  'https://github.com/FBAUD71/prepa-mariage/raw/main/web-app-manifest-512x512.png',
-  'https://github.com/FBAUD71/prepa-mariage/raw/main/apple-touch-icon.png',
-  'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
-  'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'
+  'index.html',
+  'manifest.json',
+  'icone-180x180.png',
+  'icone-192x192.png',
+  'icone-512x512.png'
 ];
 
 self.addEventListener('install', event => {
